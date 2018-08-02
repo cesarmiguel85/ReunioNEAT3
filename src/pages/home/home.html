@@ -1,0 +1,36 @@
+<ion-content padding>
+
+  <div class="container">
+
+    <ion-grid>
+
+      <ion-row>
+        <ion-col col-12>
+          <div class="logoimage">
+
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-10 offset-1><p class="subtitle">{{this.subtitle}}</p></ion-col>
+      </ion-row>
+
+    </ion-grid>
+
+    <ion-card (click)="gotoLoad()">
+      <ion-card-content>
+        LOAD PREVIOUSLY SAVED MEETING
+      </ion-card-content>
+    </ion-card>
+    <ion-card (click)="gotoMembers()">
+      <ion-card-content>
+        START A NEW MEETING
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+  <div class="aboutus" (click)="aboutUs()"><p>About us</p></div>
+
+</ion-content>

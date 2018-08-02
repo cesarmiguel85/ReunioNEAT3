@@ -1,0 +1,20 @@
+page-finish {
+    .card-header-md,
+    .card-header-ios {
+        font-weight: bold !important;
+    }
+    .note {
+        font-size: 1.1rem;
+        color: grey;
+        text-align: right;
+        margin-bottom: -10px;
+    }
+    .center {
+        text-align: center;
+    }
+    .button-inner {
+        margin: 0px 0.5rem !important;
+        font-size: 2rem !important;
+        color: white;
+    }
+}

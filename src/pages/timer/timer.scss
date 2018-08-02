@@ -1,0 +1,48 @@
+page-timer {
+    .card-header-md,
+    .card-header-ios {
+        font-size: 5rem;
+        color: #222;
+        padding: 16px;
+        text-align: center;
+    }
+    .button-md,
+    .button-ios {
+        background-color: #e97910 !important;
+    }
+    .logoalert {
+        height: 20vh;
+        width: 100%;
+        background-image: url("../assets/imgs/warning.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 2vh;
+    }
+    .alerttext {
+        text-align: center;
+    }
+    .alertbox {
+        background-color: #ffffff;
+        border-radius: 5px;
+        margin: 10%;
+        -webkit-animation: flashing 1s ease-in-out infinite;
+        -moz-animation: flashing 1s ease-in-out infinite;
+        -o-animation: flashing 1s ease-in-out infinite;
+        animation: flashing 1s ease-in-out infinite;
+    }
+    ion-title {
+        padding-right: 50px !important;
+    }
+    @-webkit-keyframes flashing {
+        0% {
+            background-color: #ffffff;
+        }
+        50% {
+            background-color: #ffb3b3;
+        }
+        100% {
+            background-color: #ffffff;
+        }
+    }
+}

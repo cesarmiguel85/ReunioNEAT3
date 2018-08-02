@@ -1,0 +1,102 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>
+            PROFILES
+        </ion-title>
+        <ion-buttons end>
+
+            <button ion-button (click)="this.saveMeeting()" *ngIf="meetingProvider.members.length>0">
+          <!--<ion-icon name="archive"></ion-icon>-->
+          <i class="buttonheader fa fa-save" *ngIf="meetingProvider.members.length>0"><span>SAVE</span></i>
+      </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+    <div class="topnote">
+        <p>Swipe to edit or delete items. Bottom + to add new.</p>
+    </div>
+    <ion-list inset reorder="true" (ionItemReorder)="reorderItems($event)" class="memberlist">
+        <ion-item-sliding *ngFor="let member of meetingProvider.members; let memberIndex = index" #slidingItem>
+            <ion-item>
+
+
+                <!--
+                <div class="memeber_title">
+                    {{member.title}}
+                </div>
+                <div class="memeber_cost">
+                    {{member.cost}}
+                </div>
+                <div class="memeber_number">
+                    {{member.number}}
+                </div>
+                -->
+
+                <h2>{{member.title}}</h2>
+                <p>{{member.cost}} {{this.textCostScheme(member.costScheme)}}</p>
+                <ion-note class="note_number" item-start>
+                    {{member.number}}
+                </ion-note>
+
+            </ion-item>
+
+            <ion-item-options side="left" (ionSwipe)="this.editMember(memberIndex,slidingItem);">
+                <button ion-button color="warning" expandable (click)="this.editMember(memberIndex,slidingItem)">
+          <ion-icon name="create" class="expand-hide"></ion-icon>
+          <div class="expand-hide">EDIT</div>
+        </button>
+            </ion-item-options>
+
+            <ion-item-options side="right" (ionSwipe)="this.removeMember(memberIndex,slidingItem)">
+                <button ion-button color="danger" expandable (click)="this.removeMember(memberIndex,slidingItem)">
+          <ion-icon name="trash" class="expand-hide"></ion-icon>
+          <div class="expand-hide">REMOVE</div>
+        </button>
+            </ion-item-options>
+
+            <!--
+            <ion-item-options side="left">
+                <button color="warning" ion-button (click)="this.editMember(memberIndex)">
+                  <ion-icon name="create"></ion-icon>
+                </button>
+            </ion-item-options>
+            -->
+        </ion-item-sliding>
+
+    </ion-list>
+
+    <ion-grid *ngIf="meetingProvider.members.length>0">
+        <ion-row>
+            <ion-col col-6>
+                <div class="divbutton alarmbutton shadow" (click)="this.gotoCountdown()">
+                    <div class="divbutton_container">
+                        <ion-icon name="cash"></ion-icon>
+                        <p>Start money countdown</p>
+                    </div>
+                </div>
+
+            </ion-col>
+            <ion-col col-6>
+                <div class="divbutton cashbutton shadow " (click)="this.gotoTimer()">
+                    <div class="divbutton_container">
+                        <ion-icon name="alarm"></ion-icon>
+                        <p>Start cost
+                            <br>timer</p>
+                    </div>
+                </div>
+            </ion-col>
+        </ion-row>
+
+    </ion-grid>
+
+
+    <ion-fab right bottom>
+        <button ion-fab (click)="this.openModal(-1)">
+      <ion-icon name="add"></ion-icon>
+    </button>
+    </ion-fab>
+
+</ion-content>

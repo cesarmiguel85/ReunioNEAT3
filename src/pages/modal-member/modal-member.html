@@ -1,0 +1,77 @@
+<!--
+  Generated template for the ModalMemberPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<div class="modalWindow">
+    <!--
+    <ion-header>
+
+        <ion-navbar>
+            <ion-title>ModalMember</ion-title>
+            <ion-buttons end>
+                <button ion-button (click)="this.closeModal()">Close</button>
+            </ion-buttons>
+        </ion-navbar>
+
+    </ion-header>
+  -->
+
+    <ion-content padding class="inner-modal-page">
+
+        <div class="center_modal">
+            <div class="form_content">
+                <ion-item>
+                    <ion-label>Title</ion-label>
+                    <ion-input id="title" type="text" [(ngModel)]="this.title"></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Cost</ion-label>
+                    <ion-input id="cost" type="number" [(ngModel)]="this.cost"></ion-input>
+                    <ion-select id="costScheme" [(ngModel)]="this.costScheme">
+                        <ion-option value="h">€/hour*</ion-option>
+                        <ion-option value="d">€/day*</ion-option>
+                        <ion-option value="m">€/month*</ion-option>
+                        <ion-option value="y">€/year*</ion-option>
+                    </ion-select>
+                </ion-item>
+                <ion-item>
+                    <ion-label>Number</ion-label>
+                    <ion-input id="numb" type="number" [(ngModel)]="this.numb"></ion-input>
+                </ion-item>
+            </div>
+            <ion-grid>
+                <ion-row>
+                    <ion-col class="align-text-middle">
+                        <button ion-button color="danger" (click)="this.closeModal()" class="margin_center">Cancel</button>
+                    </ion-col>
+                    <ion-col class="align-text-middle">
+                        <button ion-button color="secondary" (click)="this.saveData()" class="margin_center">Save</button>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+            <ion-grid>
+                <ion-row>
+                    <ion-col class="align-text-middle" *ngIf="this.costScheme==='h'">
+                        <p class="schemenote">* Raw cost per hour.</p>
+                    </ion-col>
+                    <ion-col class="align-text-middle" *ngIf="this.costScheme==='d'">
+                        <p class="schemenote">* Raw cost per day, on an 8 hour/day basis.</p>
+                    </ion-col>
+                    <ion-col class="align-text-middle" *ngIf="this.costScheme==='m'">
+                        <p class="schemenote">* Raw cost per month (take the raw monthly salary), on an 20 day/month and 8 hour/day basis.</p>
+                    </ion-col>
+                    <ion-col class="align-text-middle" *ngIf="this.costScheme==='y'">
+                        <p class="schemenote">* Raw cost per year (take the raw annual salary), on an 230 day/year and 8 hour/day basis.</p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+
+        </div>
+
+    </ion-content>
+
+</div>

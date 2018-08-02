@@ -1,0 +1,25 @@
+page-load {
+    .scroll-content {
+        padding: 0px !important;
+        text-align: center;
+    }
+    .topnote {
+        text-align: center;
+        font-style: italic;
+        color: #8b8b8b;
+        font-size: 1.1rem;
+    }
+    .topnote p {
+        margin: 3px;
+        margin-top: 5px;
+    }
+    .item-md h2 {
+        font-weight: bold;
+    }
+    ion-title {
+        padding-right: 50px !important;
+    }
+    .noitems {
+        padding: 0px 2em;
+    }
+}

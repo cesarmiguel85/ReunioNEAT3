@@ -1,0 +1,81 @@
+page-members {
+    .note_number {
+        margin: 10px 5px 10px 10px !important;
+        font-size: 2rem;
+        width: 4rem;
+        text-align: center;
+    }
+    .item-md {
+        padding: 0px;
+    }
+    .item-md h2 {
+        font-weight: bold;
+        padding-top: 5px;
+    }
+    .scroll-content {
+        padding: 0px !important;
+        text-align: center;
+    }
+    .topnote {
+        text-align: center;
+        font-style: italic;
+        color: #8b8b8b;
+        font-size: 1.1rem;
+    }
+    .scroll-content p {
+        margin: 3px;
+        margin-top: 5px;
+    }
+    .divbutton {
+        display: flex;
+        flex-direction: column;
+        border-radius: 3px;
+        min-height: 6em;
+        font-size: 1.5rem;
+        background-color: white;
+        background-color: #e97910;
+        color: white;
+    }
+    .divbutton_container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    .divbutton_container ion-icon {
+        font-size: 2em;
+    }
+    .divbutton_container p {
+        font-weight: normal;
+    }
+    .shadow {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+    .memberlist {
+        margin: 0px !important;
+    }
+    .bar-button-md,
+    .bar-button-ios {
+        color: white !important;
+        font-size: 2rem;
+    }
+    .faborange,
+    .fab-md {
+        background-color: #e97910;
+        background-color: #666666;
+    }
+    .fab {
+        height: 65px;
+        width: 65px;
+    }
+    .fab ion-icon {
+        font-size: 3rem !important;
+    }
+    .buttonheader {
+        font-size: 2rem !important;
+        display: flex;
+        flex-direction: column;
+    }
+    .buttonheader span {
+        font-size: 0.8rem !important;
+    }
+}

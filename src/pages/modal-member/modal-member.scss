@@ -1,0 +1,37 @@
+page-modal-member {
+    .modalWindow {
+        width: 100vw;
+        height: 100vh;
+    }
+    .inner-modal-page {
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.5);
+        margin: auto auto;
+    }
+    .inner-modal-page .scroll-content {
+        display: flex;
+    }
+    .align-text-middle {
+        display: flex;
+        align-items: center;
+    }
+    .margin_center {
+        margin: auto;
+    }
+    .center_modal {
+        margin: auto;
+    }
+    .form_content {
+        padding: 0px 15px 25px 5px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .schemenote {
+        text-align: center;
+        font-style: italic;
+        width: 100%;
+    }
+    .item-input ion-label {
+        color: #107dd6;
+    }
+}

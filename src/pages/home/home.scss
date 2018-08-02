@@ -1,0 +1,47 @@
+page-home {
+    .logoimage {
+        height: 20vh;
+        width: 100%;
+        background-image: url("../assets/imgs/logo.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .container {
+        margin: auto;
+    }
+    .scroll-content {
+        display: flex !important;
+        background-color: #dedede;
+    }
+    .card-content-md,
+    .card-content-ios {
+        text-align: center;
+    }
+    .subtitle {
+        margin: 10px auto;
+        font-style: italic;
+        text-align: center;
+    }
+    .aboutus {
+        width: 7em;
+        height: 1.7em;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-radius: 4px;
+        display: flex;
+        margin: 10px;
+    }
+    .aboutus p {
+        margin: auto;
+    }
+    .alert-md .alert-sub-title,
+    .alert-ios .alert-sub-title {
+        font-size: 5px !important;
+    }
+    .card-content-ios {
+        text-align: center !important;
+    }
+}
